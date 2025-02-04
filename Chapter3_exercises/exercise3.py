@@ -4,7 +4,6 @@ guests_lists = ['Rose','Linda','Micheal','John','Peter','Paul','David','Mary'] #
 # printing a message to each person, inviting them to dinner
 print(f'Hello {guests_lists[0].title()} I will like to invite you to Dinner at my place this weekend!')
 print(f'Hello {guests_lists[1].title()} I will like to invite you for Dinner at my place this weekend!')
-print(f'Hello {guests_lists[1].title()} I will like to invite you for Dinner at my place this weekend!')
 print(f'Hello {guests_lists[2].title()} I will like to invite you for Dinner at my place this weekend!')
 print(f'Hello {guests_lists[3].title()} I will like to invite you for Dinner at my place this weekend!')
 print(f'Hello {guests_lists[4].title()} I will like to invite you for Dinner at my place this weekend!')
@@ -17,29 +16,34 @@ print(f'Hello {guests_lists[-1].title()} I will like to invite you for Dinner at
 guests_lists.insert(0, 'Abraham') #Inserted Abraham at the beginning of the list
 guests_lists.insert(4, 'Sarah') #Inserted Sarah at the middle of the List
 guests_lists.append('Isaac')#Inserted Isaac at the end of the List
+print(guests_lists) #Printing the List of Invitees for Dinner at my place this weekend
 #Printing a Message to the added Invitees for Dinner at my place
 print(f'Hello {guests_lists[0].title()} I will like to invite you for Dinner at my place this weekend!')
 print(f'Hello {guests_lists[4].title()} I will like to invite you for Dinner at my place this weekend!')
 print(f'Hello {guests_lists[-1].title()} I will like to invite you for Dinner at my place this weekend!')
 #I just found out that the dinner table will not be available so I will only be able to invite 2 people
 #I will be using the pop() method to remove the extra people from the List
-guests_lists.pop(0)#Removed Abraham from the List using the pop() method
-print(f'Sorry {guests_lists[0].title()} I can only invite 2 people for Dinner at my place this weekend!')
-guests_lists.pop(4)#Removed Sarah from the List using the pop() method
-print(f'Sorry {guests_lists[4].title()} I can only invite 2 people for Dinner at my place this weekend!')
-guests_lists.pop(-1)#Removed Isaac from the List using the pop() method
-print(f'Sorry {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
-guests_lists.pop(1)#Removed Linda from the List using the pop() method
-print(f'Sorry {guests_lists[1].title()} I can only invite 2 people for Dinner at my place this weekend!')
-guests_lists.pop(3)#Removed Peter from the List using the pop() method
-print(f'Sorry {guests_lists[3].title()} I can only invite 2 people for Dinner at my place this weekend!')
-guests_lists.pop(-2)#Removed Paul from the List using the pop() method
-print(f'Sorry {guests_lists[-2].title()} I can only invite 2 people for Dinner at my place this weekend!')
-guests_lists.pop(-1)#Removed Shirley from the List using the pop() method
-print(f'Sorry {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
-guests_lists.pop(-3)#Removed David from the List using the pop() method
+guests_lists.pop(-1) #Removed Isaac from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
+guests_lists.pop(-1) #Removed Shirley from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
+guests_lists.pop(-1) #Removed David from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
+guests_lists.pop(-1) #Removed Paul from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
+guests_lists.pop(-1) #Removed Peter from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
+guests_lists.pop(-1) #Removed John from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
+guests_lists.pop(-1) #Removed Sarah from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
+guests_lists.pop(-1) #Removed Micheal from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
+guests_lists.pop(-1) #Removed Linda from the List using the pop() method
+print(f'Hello {guests_lists[-1].title()} I can only invite 2 people for Dinner at my place this weekend!')
 
+#Using the Del method to remove the remaining people from the List
+del guests_lists[0] #Removed Abraham from the List using the del method
+del guests_lists[0] #Removed Rose from the List using the del method
 
-print(guests_lists)#Printing the List of Invitees for Dinner at my place this weekend
-
-
+print(guests_lists) #Printing the List of Invitees for Dinner at my place this weekend
