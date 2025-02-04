@@ -1,4 +1,5 @@
 #This is a Practice Session of Learning Python by Creating a list and doing a lot with it.
+
 friends_names = ['Shekinah', 'Manyi', 'Achidi', 'Salome', 'Gilda', 'Giren', 'Anje', 'Mc', 'Peter', 'Elijah', 'Hani'] #Created a List of Names
 friends_names[-3] = 'Shirley' #Changed the third element to the end which is Peter to Shirley
 friends_names.insert(0, 'Bernice') #Inserted Bernice at the beginning of the list
