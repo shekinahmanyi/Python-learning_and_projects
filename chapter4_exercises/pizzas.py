@@ -15,3 +15,4 @@ print("My friend's favorite pizzas are:") # Printing the copied list
 for friend_pizza in friend_pizzas: # Looping through the copied list
     print(friend_pizza.title()) # Printing the value of the list
 print('\n')
+
