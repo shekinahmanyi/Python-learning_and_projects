@@ -4,6 +4,8 @@ for pizza in pizzas:
     print(f'I like {pizza.title()} pizza.')
 print('I really love pizza!')
 print('\n')
+
+#Copying the List
 friend_pizzas = pizzas[:] # Copying the list
 pizzas.append('vegetarian') # Adding a new pizza to the original list
 friend_pizzas.append('meat lovers') # Adding a new pizza to the copied list
