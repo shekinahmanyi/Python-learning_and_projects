@@ -6,7 +6,30 @@
 #     else:
 #         print(car.title())
 #Checking for Inequality
-requested_topping = 'mushrooms'
+# requested_topping = 'mushrooms'
 
-if requested_topping != 'anchovies':
-    print("Hold the anchovies!")
+# if requested_topping != 'anchovies':
+#     print("Hold the anchovies!")
+
+#Checking whether a value is in a list
+# banned_users = ['martha', 'john', 'joe']
+# user = 'martha'
+# if user not in banned_users:
+#     print(f"{user.title()}, you can post a response if you wish.")
+# else:
+#     print(f"{user.title()}, you are banned from posting responses.")
+
+#Boolean Expressions
+# game_active = True
+# can_edit = False
+# print(game_active)
+
+#exercise
+# car = 'subaru'
+# print("Is car == 'subaru'? I predict True.")
+# print(car == 'subaru')
+
+# print("\nIs car == 'audi'? I predict False.")
+# print(car == 'audi')
+
+#If Statements
