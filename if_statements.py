@@ -1,10 +1,11 @@
-# if Statements
+# Example code for if statements in Python
 # cars = ['audi', 'bmw', 'subaru', 'toyota']
 # for car in cars:
 #     if car == 'audi': # check if the first value in the list is 'audi' and if it is, print it in uppercase
 #         print(car.upper())
 #     else:
 #         print(car.title())
+
 #Checking for Inequality
 # requested_topping = 'mushrooms'
 
@@ -32,4 +33,13 @@
 # print("\nIs car == 'audi'? I predict False.")
 # print(car == 'audi')
 
-#If Statements
+#If-Else Statements
+age = 12
+if age >= 18:
+    print("You are old enough to vote!")
+    print("Have you registered to vote yet?")
+else:
+    print("Sorry, you are too young to vote.")
+    print("Please register to vote as soon as you turn 18!")
+
+#The if-elif-else Chain
