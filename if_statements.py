@@ -53,3 +53,12 @@ elif age < 65:
 else:
     price = 20
 print(f"Your admission cost is ${price}.")
+
+#if age is even and greater than 20, print "Even and greater than 20"
+# age = 22
+# if age % 2 == 0 and age > 20:
+#     print("Even and greater than 20")
+#if age is odd or less than 20, print "Odd or less than 20"
+# if age % 2 != 0 or age < 20:
+#if age is even and in the inclusive range of 2 to 5, print "Even and in the inclusive range of 2 to 5"
+# if age % 2 == 0 and age >= 2 and age <= 5:
