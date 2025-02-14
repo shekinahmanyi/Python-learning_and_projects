@@ -13,7 +13,7 @@
 #Tracking the position of an alien that can move at different speeds
 aliens = {'x_position': 2, 'y_position': 25, 'speed': 'medium'} # this aliens has 3 key-value pairs x_position, y_position and speed
 print(f"Original position: {aliens['x_position']}")
-
+aliens['speed'] = 'fast'
 # Move the alien to the right
 # Determine how far to move the alien based on its current speed
 if aliens['speed'] == 'slow':
