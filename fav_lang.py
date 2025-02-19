@@ -30,3 +30,12 @@ for name in fav_lang.keys():
 #you might want to sort the output of a dictionary
 # for name in sorted(fav_lang.keys()):
 #     print(f"{name.title()}, thank you for taking the poll.")
+
+#we can also use the values() method to return a list of values without any keys
+# print("The following languages have been mentioned:")
+# for lang in fav_lang.values():
+#     print(lang.title())
+#The method above is good but can lead to a repetition of values. To avoid this, we use the set() method
+# print("The following languages have been mentioned:")   
+# for lang in set(fav_lang.values()):
+#     print(lang.title())
