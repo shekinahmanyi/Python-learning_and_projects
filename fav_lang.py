@@ -7,5 +7,8 @@ fav_lang = {
     'phil': 'python',
 }
 
-language = fav_lang['sarah'].title()
-print(f"Sarah's favorite language is {language}.")
+# language = fav_lang['sarah'].title()
+# print(f"Sarah's favorite language is {language}.")
+
+for name, lang in fav_lang.items():
+    print(f"{name.title()}'s favorite language is {lang.title()}.")
