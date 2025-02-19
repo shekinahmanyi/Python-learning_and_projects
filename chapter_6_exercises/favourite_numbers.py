@@ -5,7 +5,6 @@ fav_numbers = {
     'edward': 5,
     'phil': 9,
 }
-print(f"Jen's favorite number is {fav_numbers['jen']}")
-print(f"Sarah's favorite number is {fav_numbers['sarah']}")
-print(f"Edward's favorite number is {fav_numbers['edward']}")
-print(f"Phil's favorite number is {fav_numbers['phil']}")
+#Loop through the dictionary and print the person and their favorite number
+for name, number in fav_numbers.items():
+    print(f"{name.title()}'s favorite number is {number}.")
