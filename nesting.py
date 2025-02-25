@@ -11,13 +11,13 @@
 aliens = []
 
 # Make 30 green aliens.
-for alien_number in range(30):
-    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
-    aliens.append(new_alien)
+for alien_number in range(30): # range() function returns a series of numbers.
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'} # Create a new alien.
+    aliens.append(new_alien) # Add the new alien to the list.
 
 
 # Show the first 5 aliens.
-for alien in aliens[:5]:
+for alien in aliens[:5]: # Slice the list to print the first 5 aliens.
     print(alien)
 print("...") # Show how many aliens have been created.
 # Show how many aliens have been created.
