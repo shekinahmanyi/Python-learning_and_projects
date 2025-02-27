@@ -1,11 +1,17 @@
 
 # A dictionary of similar objects
 fav_lang = {
-    'jen': 'python',
-    'sarah': 'c',
-    'edward': 'ruby',
-    'phil': 'python',
+    'jen': ['python', 'ruby'], # A list of languages as values
+    'sarah': ['c'], 
+    'edward': ['ruby', 'go'], 
+    'phil': ['python', 'haskell'],
 }
+
+# Looping through the dictionary
+for name in fav_lang:
+    print(f"\n{name.title()}'s favorite languages are:")
+    for lang in fav_lang[name]:
+        print(f"\t{lang.title()}")
 
 # language = fav_lang['sarah'].title()
 # print(f"Sarah's favorite language is {language}.")
@@ -16,16 +22,16 @@ fav_lang = {
 # for name in fav_lang.keys():
 #     print(name.title())
 
-friends = ['phil', 'sarah', 'jen']
-for name in fav_lang.keys():
-    print(f"Hi {name.title()}.")
+# friends = ['phil', 'sarah', 'jen']
+# for name in fav_lang.keys():
+#     print(f"Hi {name.title()}.")
 
-    if name in friends:
-        lang = fav_lang[name].title()
-        print(f"\t{name.title()}, I see you love {lang}!")
+#     if name in friends:
+#         lang = fav_lang[name].title()
+#         print(f"\t{name.title()}, I see you love {lang}!")
     
-    elif 'erin' not in fav_lang.keys(): #check if a particular person was polled and if not, print a message
-        print("Erin, please take our poll!")
+#     elif 'erin' not in fav_lang.keys(): #check if a particular person was polled and if not, print a message
+#         print("Erin, please take our poll!")
 
 #you might want to sort the output of a dictionary
 # for name in sorted(fav_lang.keys()):
