@@ -15,6 +15,8 @@ if len(fav_lang) > 1:
             print(f"\t{name.title()}")  
 else:
     print("No one has more than one favorite language.")
+
+
 # Looping through the dictionary
 # for name in fav_lang:
 #     print(f"\n{name.title()}'s favorite languages are:")
@@ -49,6 +51,7 @@ else:
 # print("The following languages have been mentioned:")
 # for lang in fav_lang.values():
 #     print(lang.title())
+
 #The method above is good but can lead to a repetition of values. To avoid this, we use the set() method
 # print("The following languages have been mentioned:")   
 # for lang in set(fav_lang.values()):
