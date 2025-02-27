@@ -7,11 +7,19 @@ fav_lang = {
     'phil': ['python', 'haskell'],
 }
 
+#An If statement to check if a person has more than one favorite language
+if len(fav_lang) > 1:
+    print("The following people have more than one favorite languages:")
+    for name in fav_lang:
+        if len(fav_lang[name]) > 1:
+            print(f"\t{name.title()}")  
+else:
+    print("No one has more than one favorite language.")
 # Looping through the dictionary
-for name in fav_lang:
-    print(f"\n{name.title()}'s favorite languages are:")
-    for lang in fav_lang[name]:
-        print(f"\t{lang.title()}")
+# for name in fav_lang:
+#     print(f"\n{name.title()}'s favorite languages are:")
+#     for lang in fav_lang[name]:
+#         print(f"\t{lang.title()}")
 
 # language = fav_lang['sarah'].title()
 # print(f"Sarah's favorite language is {language}.")
