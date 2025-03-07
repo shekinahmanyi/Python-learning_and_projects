@@ -13,7 +13,7 @@
 # prompt += "\nEnter 'quit' to end the program. "
 
 # active = True # flag
-# while active:
+# while active: #This loop will run as long as the active flag is True
 #     message = input(prompt)
 
 #     if message == 'quit':
