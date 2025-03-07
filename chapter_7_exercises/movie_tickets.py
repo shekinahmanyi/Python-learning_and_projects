@@ -5,7 +5,7 @@ prompt += "\n(Enter 'quit' when you are finished.) "
 
 while True: # this is an infinite loop
     age = input(prompt)
-    if age == 'quit':
+    if age == 'quit': # this quits the loop
         break
     else: # this is the else block for the if statement
         age = int(age)
