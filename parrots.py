@@ -21,13 +21,6 @@
 #     else:
 #         print(message)
 
-# message = ""
-# while message != 'quit':
-#     message = input(prompt)
-
-#     if message != 'quit':
-#         print(message)
-
 
 #using break to exit a loop
 # prompt = "\nPlease enter the name of a city you have visited:"
