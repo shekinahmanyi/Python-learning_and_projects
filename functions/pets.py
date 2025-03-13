@@ -6,3 +6,4 @@ def describe_pets(animal_type, pet_name):
     print(f"My {animal_type}'s name is {pet_name}.")
 
 describe_pets('hamster', 'harry')
+describe_pets('dog', 'William')
