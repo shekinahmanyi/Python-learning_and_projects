@@ -1,5 +1,5 @@
 
-def describe_pets(animal_type, pet_name):
+def describe_pets(pet_name,animal_type='dog'): #gave the animal_type a default value
 
     """ Display Information about a pet """
     print(f"\nI have an {animal_type}.")
