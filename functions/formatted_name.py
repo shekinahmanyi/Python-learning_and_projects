@@ -13,7 +13,7 @@ def get_formatted_name(first_name, last_name, middle_name=''): #Here we are defi
 musician = get_formatted_name('Dunsin', 'Oyekan')
 print(musician)
 
-writer = get_formatted_name('Shekinah', 'Manyi','Achidi')
+writer = get_formatted_name('Shekinah', 'Achidi','Manyi') # Ensuring the middle name is passed as the last parameter to get correct results
 print(writer)
 
 farmer = get_formatted_name('Giren', 'Grace')
