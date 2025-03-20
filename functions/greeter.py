@@ -28,5 +28,5 @@ while True:
     if l_name == 'q': 
         break
 
-    formatted_name = get_formatted_name(f_name, l_name,m_name)
+    formatted_name = get_formatted_name(f_name, l_name, m_name)
     print(f"\nHello, {formatted_name}")
