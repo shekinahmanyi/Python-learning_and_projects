@@ -3,7 +3,7 @@
 
 def make_albums(artist_name, artist_title, number_of_songs=None):
 
-    """" Return a dictionary of Information about the album"""
+    """" Return a dictionary of Information about the album """
 
     name_of_artist = {'Artist Name':artist_name, 'Song Title':artist_title}
 
