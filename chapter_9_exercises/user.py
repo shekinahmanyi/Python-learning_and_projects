@@ -20,6 +20,11 @@ class User :
     def increment_login_attempts(self):
         """Increment the number of login attempts."""
         self.login_attempts += 1
+    
+    def reset_login_attempts(self):
+        """Reset the number of login attempts."""
+        self.login_attempts = 0
+# Example usage of the User class
 
 first_user = User("John", "Doe", 30, "New York")
 second_user = User("Jane", "Smith", 25, "Los Angeles")
@@ -30,7 +35,8 @@ print(f"Third User: {third_user.first_name} {third_user.last_name}, Age: {third_
 first_user.describe_user()  
 first_user.greet_user()
 first_user.increment_login_attempts() # Increment login attempts
-print(f"Login attempts for {first_user.first_name}: {first_user.login_attempts}")
+first_user.reset_login_attempts
+print(f"Login attempts for {first_user.first_name}: {first_user.login_attempts} and reset to {first_user.reset_login_attempts()}")
 second_user.describe_user()
 second_user.greet_user()
 second_user.increment_login_attempts() # Increment login attempts
