@@ -7,7 +7,8 @@ class TestAnonymousSurvey(unittest.TestCase):
     
     def setUp(self): #the setUp method is called before every test method
         """Create a survey and a set of responses for use in all test methods."""
-        question = "What language did you first learn to speak?"
+        question = "What language did you first learn to speak?" #Define a question and make a survey
+        #The setUp method is used to create objects that will be used in multiple test methods
         self.my_survey = AnonymousSurvey(question)
         self.responses = ['English', 'Spanish', 'Mandarin']
     
