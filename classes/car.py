@@ -32,11 +32,43 @@ class Car :
         """Add the given amount to the odometer reading."""
         self.odometer_reading += miles
 
-my_used_car = Car('subaru', 'outback', 2015)
-print(my_used_car.get_descriptive_name())
+class Battery:
+    """A simple attempt to model a battery for an electric car."""
+    def __init__(self, battery_size=70):
+        """Initialize the battery's attributes."""
+        self.battery_size = battery_size
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+        print(f"This car can go about {range} miles on a full charge.")
 
-my_used_car.update_odometer(23_500)
-my_used_car.read_odometer()
+class ElectricCar(Car): #we are creating a child class of the parent class Car above
 
-my_used_car.increment_odometer(100)
-my_used_car.read_odometer()
+    """Represent aspects of a car, specific to electric vehicles.
+     Then initialize attributes specific to an electric car."""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class."""
+        super().__init__(make, model, year) #this super function allows you to call a method from the parent class
+        self.battery_size = 75 #this is a default value for the battery size
+
+    def describe_battery(self): #Here we are defining and adding more attributes to the child class ElectricCar
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+        
+
+#Moved this to the my_car.py file
+# my_used_car = Car('subaru', 'outback', 2015) 
+# print(my_used_car.get_descriptive_name())
+
+# my_used_car.update_odometer(23_500)
+# my_used_car.read_odometer()
+
+# my_used_car.increment_odometer(100)
+# my_used_car.read_odometer()
