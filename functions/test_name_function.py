@@ -13,6 +13,11 @@ class NamesTestCase(unittest.TestCase):
         # The assertEqual method is used to check if the output of the function matches the expected output.
         # If they match, the test passes; if not, it fails.
         self.assertEqual(formatted_name, 'Janis Joplin')
+
+    def test_first_middle_last_name(self):
+        """Do names like 'Wolfgang Amadeus Mozart' work?"""
+        formatted_name = get_formatted_name('wolfgang', 'mozart', 'amadeus')
+        self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')
  
 if __name__ == '__main__': ## This line checks if the script is being run directly (not imported as a module).
     # If it is, it calls unittest.main(), which runs all the test cases defined in the script.
