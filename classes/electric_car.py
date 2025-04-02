@@ -34,11 +34,18 @@ class Car :
 
 class ElectricCar(Car): #we are creating a child class of the parent class Car above
 
-    """Represent aspects of a car, specific to electric vehicles."""
+    """Represent aspects of a car, specific to electric vehicles.
+     Then initialize attributes specific to an electric car."""
 
     def __init__(self, make, model, year):
         """Initialize attributes of the parent class."""
         super().__init__(make, model, year) #this super function allows you to call a method from the parent class
+        self.battery_size = 75 #this is a default value for the battery size
+
+    def describe_battery(self): #Here we are defining and adding more attributes to the child class ElectricCar
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
 
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
