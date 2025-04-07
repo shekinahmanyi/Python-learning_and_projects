@@ -17,6 +17,10 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode((1200, 800)) 
         pygame.display.set_caption("Alien Invasion") #Sets the title of the window to "Alien Invasion".
 
+        #Set the background color of the screen to a light gray color.
+        #The RGB color value (230, 230, 230) represents a light gray color.
+        self.bg_color = (230, 230, 230) #This attribute will be used to fill the screen with a background color.
+
     def run_game(self): #This game is controlled by the run_game() method, which is the main loop of the game.
         """Start the main loop for the game."""
         while True:
@@ -27,6 +31,9 @@ class AlienInvasion:
                 if event.type == pygame.QUIT: #If the event is a QUIT event, it means the user has clicked the close button on the window.
                     #If the event is a QUIT event, we call sys.exit() to exit the program.
                     sys.exit()
+                    #Redraw the screen with the background color.
+                    self.screen.fill(self.bg_color)
+                    #The fill() method fills the entire screen with the specified color.
             #make the most recently drawn screen visible
             pygame.display.flip() #This method updates the contents of the display window to show the most recently drawn screen.
             #The flip() method is called to update the display with the most recent changes made to the screen.
