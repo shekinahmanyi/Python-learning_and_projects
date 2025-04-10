@@ -4,6 +4,7 @@ import sys
 import pygame #This module is used to create the game window and handle events.
 
 from settings import Settings #Import the Settings class from the settings module.
+from ship import Ship #Import the Ship class from the ship module.
 class AlienInvasion:
 
     """Overall class to manage game assets and behavior."""
@@ -19,6 +20,7 @@ class AlienInvasion:
             (self.settings.screen_width, self.settings.screen_height)) #This settings comes from the Settings class.
         pygame.display.set_caption("Alien Invasion") #Sets the title of the window to "Alien Invasion".
         
+        self.ship = Ship(self) #Creates an instance of the Ship class and assigns it to the self.ship attribute.
 
     def run_game(self): #This game is controlled by the run_game() method, which is the main loop of the game.
         """Start the main loop for the game."""
@@ -33,6 +35,8 @@ class AlienInvasion:
                     #Redraw the screen with the background color.
                     self.screen.fill(self.settings.bg_color) #comes from the Settings class.
                     #The fill() method fills the entire screen with the specified color.
+                    self.ship.blitme()
+                    #The blitme() method draws the ship at its current location on the screen.
             #make the most recently drawn screen visible
             pygame.display.flip() #This method updates the contents of the display window to show the most recently drawn screen.
             #The flip() method is called to update the display with the most recent changes made to the screen.
