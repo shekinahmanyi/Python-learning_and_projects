@@ -25,21 +25,29 @@ class AlienInvasion:
     def run_game(self): #This game is controlled by the run_game() method, which is the main loop of the game.
         """Start the main loop for the game."""
         while True:
-            #watch for keyboard and mouse events
-            #The For loop is an event loop that checks for events in the game window.
-            for event in pygame.event.get():# #pygame.event.get() returns a list of all the events that have occurred since the last time we checked for events.
-                #The for loop iterates through each event in the list and checks if it is a QUIT event.
-                if event.type == pygame.QUIT: #If the event is a QUIT event, it means the user has clicked the close button on the window.
-                    #If the event is a QUIT event, we call sys.exit() to exit the program.
-                    sys.exit()
+            self._check_events() #This is also known as the helper method and is called to check for events in the game window.
+            self._update_screen() #This is also known as the helper method and is called to update the screen with the most recent changes made to it.
                     #Redraw the screen with the background color.
-                self.screen.fill(self.settings.bg_color) #comes from the Settings class.
+           
+    def _check_events(self):
+        #watch for keyboard and mouse events
+        #The For loop is an event loop that checks for events in the game window.
+        for event in pygame.event.get():# #pygame.event.get() returns a list of all the events that have occurred since the last time we checked for events.
+        #The for loop iterates through each event in the list and checks if it is a QUIT event.
+            if event.type == pygame.QUIT: #If the event is a QUIT event, it means the user has clicked the close button on the window.
+            #If the event is a QUIT event, we call sys.exit() to exit the program.
+                sys.exit()
+
+    def _update_screen(self):
+
+        """Update images on the screen, and flip to the new screen."""
+        self.screen.fill(self.settings.bg_color) #comes from the Settings class.
                     #The fill() method fills the entire screen with the specified color.
-                self.ship.blitme()
+        self.ship.blitme()
                     #The blitme() method draws the ship at its current location on the screen.
             #make the most recently drawn screen visible
-            pygame.display.flip() #This method updates the contents of the display window to show the most recently drawn screen.
-            #The flip() method is called to update the display with the most recent changes made to the screen.
+            #The flip() method updates the contents of the display window to show the most recently drawn screen.
+        pygame.display.flip() #This method is called to update the display window with the most recent changes made to it.
     
 if __name__ == '__main__': 
     # Make a game instance, and run the game.
