@@ -37,6 +37,7 @@ class AlienInvasion:
             if event.type == pygame.QUIT: #If the event is a QUIT event, it means the user has clicked the close button on the window.
             #If the event is a QUIT event, we call sys.exit() to exit the program.
                 sys.exit()
+                
 
     def _update_screen(self):
 
