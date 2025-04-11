@@ -33,9 +33,9 @@ class AlienInvasion:
                     #If the event is a QUIT event, we call sys.exit() to exit the program.
                     sys.exit()
                     #Redraw the screen with the background color.
-                    self.screen.fill(self.settings.bg_color) #comes from the Settings class.
+                self.screen.fill(self.settings.bg_color) #comes from the Settings class.
                     #The fill() method fills the entire screen with the specified color.
-                    self.ship.blitme()
+                self.ship.blitme()
                     #The blitme() method draws the ship at its current location on the screen.
             #make the most recently drawn screen visible
             pygame.display.flip() #This method updates the contents of the display window to show the most recently drawn screen.
