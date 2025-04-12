@@ -30,14 +30,13 @@ class AlienInvasion:
                     #Redraw the screen with the background color.
            
     def _check_events(self):
-        #watch for keyboard and mouse events
         #The For loop is an event loop that checks for events in the game window.
         for event in pygame.event.get():# #pygame.event.get() returns a list of all the events that have occurred since the last time we checked for events.
         #The for loop iterates through each event in the list and checks if it is a QUIT event.
             if event.type == pygame.QUIT: #If the event is a QUIT event, it means the user has clicked the close button on the window.
             #If the event is a QUIT event, we call sys.exit() to exit the program.
                 sys.exit()
-                
+
 
     def _update_screen(self):
 
