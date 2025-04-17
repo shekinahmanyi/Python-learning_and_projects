@@ -26,6 +26,8 @@ class AlienInvasion:
         """Start the main loop for the game."""
         while True:
             self._check_events() #This is also known as the helper method and is called to check for events in the game window.
+            self.ship.update() #This method is called to update the ship's position based on the movement flags.
+            #The update() method is called to update the ship's position based on the movement flags.
             self._update_screen() #This is also known as the helper method and is called to update the screen with the most recent changes made to it.
                     #Redraw the screen with the background color.
            
@@ -39,7 +41,11 @@ class AlienInvasion:
             elif event.type == pygame.KEYDOWN: #If the event is a KEYDOWN event, it means the user has pressed a key on the keyboard.
                 if event.key == pygame.K_RIGHT: #If the key pressed is 'q', we call sys.exit() to exit the program.
                     #move the ship to the right when the 'q' key is pressed.
-                    self.ship.rect.x += 1
+                    self.ship.moving_right = True #This sets the moving_right attribute of the ship to True, indicating that the ship should move to the right.
+            elif event.type == pygame.KEYUP: #If the event is a KEYUP event, it means the user has released a key on the keyboard.
+                if event.key == pygame.K_RIGHT: #If the key released is 'q', we call sys.exit() to exit the program.
+                    #stop the ship when the 'q' key is released.
+                    self.ship.moving_right = False
 
 
     def _update_screen(self):
