@@ -16,8 +16,15 @@ class AlienInvasion:
         #The object assigned to self.screen is a Surface object, which represents the game window.
         #The Surface returned by display.set_mode() represents the entire game window where we can draw graphics and display images.
         self.settings = Settings() 
+        
+        #FULLSCREEN MODE
+        # self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN) #Creates a full-screen display window.
+        # self.screen_width = self.screen.get_rect().width #Gets the width of the screen.
+        # self.screen_height = self.screen.get_rect().height #Gets the height of the screen.
+
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height)) #This settings comes from the Settings class.
+        
         pygame.display.set_caption("Alien Invasion") #Sets the title of the window to "Alien Invasion".
         
         self.ship = Ship(self) #Creates an instance of the Ship class and assigns it to the self.ship attribute.
