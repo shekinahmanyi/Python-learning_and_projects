@@ -36,6 +36,10 @@ class AlienInvasion:
             if event.type == pygame.QUIT: #If the event is a QUIT event, it means the user has clicked the close button on the window.
             #If the event is a QUIT event, we call sys.exit() to exit the program.
                 sys.exit()
+            elif event.type == pygame.KEYDOWN: #If the event is a KEYDOWN event, it means the user has pressed a key on the keyboard.
+                if event.key == pygame.K_RIGHT: #If the key pressed is 'q', we call sys.exit() to exit the program.
+                    #move the ship to the right when the 'q' key is pressed.
+                    self.ship.rect.x += 1
 
 
     def _update_screen(self):
