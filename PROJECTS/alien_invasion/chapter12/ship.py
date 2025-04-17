@@ -19,14 +19,18 @@ class Ship:
 
         #Movement flag.
         self.moving_right = False #This is a flag that indicates whether the ship is moving to the right or not.
+        self.moving_left = False #This is a flag that indicates whether the ship is moving to the left or not.
         
     
     def update(self):
         """Update the ship's position based on the movement flag."""
         #Update the ship's position based on the movement flags.
-        if self.moving_right and self.rect.right < self.screen_rect.right: #This checks if the ship is moving to the right and if it is within the screen boundaries.
+        if self.moving_right: #This checks if the ship is moving to the right and if it is within the screen boundaries.
             #If the ship is moving to the right and is within the screen boundaries, we update its position by adding 1 to its x-coordinate.
             self.rect.x += 1
+        if self.moving_left:
+            #If the ship is moving to the left and is within the screen boundaries, we update its position by subtracting 1 from its x-coordinate.
+            self.rect.x -= 1
     
     def blitme(self): #This draws the image to the screen at the ship's current location.
         """Draw the ship at its current location."""

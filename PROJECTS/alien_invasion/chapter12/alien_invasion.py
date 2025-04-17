@@ -42,10 +42,16 @@ class AlienInvasion:
                 if event.key == pygame.K_RIGHT: #If the key pressed is 'q', we call sys.exit() to exit the program.
                     #move the ship to the right when the 'q' key is pressed.
                     self.ship.moving_right = True #This sets the moving_right attribute of the ship to True, indicating that the ship should move to the right.
+                elif event.key == pygame.K_LEFT: #If the key pressed is 'q', we call sys.exit() to exit the program.
+                    #move the ship to the left when the 'q' key is pressed.
+                    self.ship.moving_left = True #This sets the moving_left attribute of the ship to True, indicating that the ship should move to the left.
             elif event.type == pygame.KEYUP: #If the event is a KEYUP event, it means the user has released a key on the keyboard.
                 if event.key == pygame.K_RIGHT: #If the key released is 'q', we call sys.exit() to exit the program.
                     #stop the ship when the 'q' key is released.
                     self.ship.moving_right = False
+                elif event.key == pygame.K_LEFT: #If the key released is 'q', we call sys.exit() to exit the program.
+                    #stop the ship when the 'q' key is released.
+                    self.ship.moving_left = False
 
 
     def _update_screen(self):
