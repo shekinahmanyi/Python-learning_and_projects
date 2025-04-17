@@ -32,6 +32,7 @@ class AlienInvasion:
                     #Redraw the screen with the background color.
            
     def _check_events(self):
+        """Respond to keypresses and mouse events."""
         #The For loop is an event loop that checks for events in the game window.
         for event in pygame.event.get():# #pygame.event.get() returns a list of all the events that have occurred since the last time we checked for events.
         #The for loop iterates through each event in the list and checks if it is a QUIT event.
@@ -39,19 +40,32 @@ class AlienInvasion:
             #If the event is a QUIT event, we call sys.exit() to exit the program.
                 sys.exit()
             elif event.type == pygame.KEYDOWN: #If the event is a KEYDOWN event, it means the user has pressed a key on the keyboard.
-                if event.key == pygame.K_RIGHT: #If the key pressed is 'q', we call sys.exit() to exit the program.
-                    #move the ship to the right when the 'q' key is pressed.
-                    self.ship.moving_right = True #This sets the moving_right attribute of the ship to True, indicating that the ship should move to the right.
-                elif event.key == pygame.K_LEFT: #If the key pressed is 'q', we call sys.exit() to exit the program.
-                    #move the ship to the left when the 'q' key is pressed.
-                    self.ship.moving_left = True #This sets the moving_left attribute of the ship to True, indicating that the ship should move to the left.
+                 self._check_keydown_events(event)   
             elif event.type == pygame.KEYUP: #If the event is a KEYUP event, it means the user has released a key on the keyboard.
-                if event.key == pygame.K_RIGHT: #If the key released is 'q', we call sys.exit() to exit the program.
-                    #stop the ship when the 'q' key is released.
-                    self.ship.moving_right = False
-                elif event.key == pygame.K_LEFT: #If the key released is 'q', we call sys.exit() to exit the program.
-                    #stop the ship when the 'q' key is released.
-                    self.ship.moving_left = False
+                 self._check_keyup_events(event)
+               
+
+    def _check_keydown_events(self, event):
+        """Respond to key presses."""
+        if event.key == pygame.K_RIGHT: #If the key pressed is 'q', we call sys.exit() to exit the program.
+            #move the ship to the right when the 'q' key is pressed.
+            self.ship.moving_right = True #This sets the moving_right attribute of the ship to True, indicating that the ship should move to the right.
+        elif event.key == pygame.K_LEFT: #If the key pressed is 'q', we call sys.exit() to exit the program.
+            #move the ship to the left when the 'q' key is pressed.
+            self.ship.moving_left = True #This sets the moving_left attribute of the ship to True, indicating that the ship should move to the left.
+        elif event.key == pygame.K_q: #If the key pressed is 'q', we call sys.exit() to exit the program.
+            #If the key pressed is 'q', we call sys.exit() to exit the program.
+            sys.exit() #This exits the program.
+
+    def _check_keyup_events(self, event):
+        """Respond to key releases."""
+        if event.key == pygame.K_RIGHT: #If the key released is 'q', we call sys.exit() to exit the program.
+            #stop the ship when the 'q' key is released.
+            self.ship.moving_right = False
+        elif event.key == pygame.K_LEFT: #If the key released is 'q', we call sys.exit() to exit the program.
+            #stop the ship when the 'q' key is released.
+            self.ship.moving_left = False
+       
 
 
     def _update_screen(self):
