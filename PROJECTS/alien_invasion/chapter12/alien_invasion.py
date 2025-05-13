@@ -30,7 +30,9 @@ class AlienInvasion:
         self.ship = Ship(self) #Creates an instance of the Ship class and assigns it to the self.ship attribute.
 
     def run_game(self): #This game is controlled by the run_game() method, which is the main loop of the game.
+
         """Start the main loop for the game."""
+
         while True:
             self._check_events() #This is also known as the helper method and is called to check for events in the game window.
             self.ship.update() #This method is called to update the ship's position based on the movement flags.
@@ -39,8 +41,10 @@ class AlienInvasion:
                     #Redraw the screen with the background color.
            
     def _check_events(self):
+
         """Respond to keypresses and mouse events."""
         #The For loop is an event loop that checks for events in the game window.
+
         for event in pygame.event.get():# #pygame.event.get() returns a list of all the events that have occurred since the last time we checked for events.
         #The for loop iterates through each event in the list and checks if it is a QUIT event.
             if event.type == pygame.QUIT: #If the event is a QUIT event, it means the user has clicked the close button on the window.
@@ -53,7 +57,9 @@ class AlienInvasion:
                
 
     def _check_keydown_events(self, event):
+
         """Respond to key presses."""
+
         if event.key == pygame.K_RIGHT: #If the key pressed is 'q', we call sys.exit() to exit the program.
             #move the ship to the right when the 'q' key is pressed.
             self.ship.moving_right = True #This sets the moving_right attribute of the ship to True, indicating that the ship should move to the right.
@@ -65,7 +71,9 @@ class AlienInvasion:
             sys.exit() #This exits the program.
 
     def _check_keyup_events(self, event):
+
         """Respond to key releases."""
+        
         if event.key == pygame.K_RIGHT: #If the key released is 'q', we call sys.exit() to exit the program.
             #stop the ship when the 'q' key is released.
             self.ship.moving_right = False
